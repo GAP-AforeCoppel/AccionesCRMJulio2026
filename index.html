@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reporte Folios CRM Servicios | Corte Sem 28</title>
+    <!-- Incluyendo Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Incluyendo html2canvas para la descarga de la imagen -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f1f5f9; /* Un tono un poco más profundo para que resalte la tarjeta */
+        }
+        /* Ocultar elementos durante la captura */
+        .hide-on-capture {
+            display: flex;
+        }
+        .capturing .hide-on-capture {
+            display: none !important;
+        }
+    </style>
+</head>
+<body class="p-4 sm:p-8 flex justify-center items-center min-h-screen">
+
+    <div class="max-w-4xl w-full">
+        
+        <!-- Botón de descarga -->
+        <div class="flex justify-end mb-6 hide-on-capture">
+            <button id="downloadBtn" class="bg-slate-800 hover:bg-slate-900 text-white font-medium py-2 px-5 rounded-lg shadow-lg transition-all duration-300 flex items-center gap-2 text-sm border border-slate-700">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                </svg>
+                Descargar Reporte
+            </button>
+        </div>
+
+        <!-- Contenedor principal del reporte a capturar -->
+        <div id="report-content" class="bg-white rounded-xl shadow-2xl relative overflow-hidden">
+            
+            <!-- Barra decorativa superior -->
+            <div class="h-2 w-full bg-gradient-to-r from-teal-500 via-indigo-500 to-sky-500"></div>
+
+            <div class="p-8 sm:p-10">
+                <!-- Encabezado Ejecutivo -->
+                <header class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-10 pb-6 border-b border-slate-100">
+                    <div>
+                        <div class="flex items-center gap-3">
+                            <h1 class="text-3xl font-extrabold text-slate-800 tracking-tight">Reporte Folios CRM Servicios</h1>
+                            <span class="bg-indigo-100 text-indigo-800 text-sm font-bold px-3 py-1 rounded-md tracking-wider">SEM 28</span>
+                        </div>
+                    </div>
+                    <div class="mt-4 sm:mt-0 text-left sm:text-right">
+                        <p class="text-[11px] text-slate-400 uppercase tracking-widest font-semibold mb-0.5">Fecha de Corte</p>
+                        <p class="text-lg text-slate-700 font-bold">09/07/2026</p>
+                    </div>
+                </header>
+
+                <main>
+                    <!-- Sección 1: Acciones por Gerencia -->
+                    <section id="actions-section" class="mb-12">
+                        <h2 class="text-lg font-bold text-slate-800 mb-6 flex items-center gap-2">
+                            <span class="bg-slate-800 w-1.5 h-5 rounded-full inline-block"></span>
+                            1. Acciones y Seguimiento por Gerencia
+                        </h2>
+                        
+                        <div class="space-y-5">
+                            
+                            <!-- Admón. de Expedientes -->
+                            <div class="bg-white border border-slate-100 rounded-lg shadow-sm flex relative overflow-hidden group">
+                                <div class="w-1.5 bg-teal-500 absolute left-0 top-0 bottom-0"></div>
+                                <div class="p-5 flex gap-4 w-full pl-6">
+                                    <div class="w-10 h-10 rounded-full bg-teal-50 flex items-center justify-center flex-shrink-0 text-teal-600 border border-teal-100">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                                        </svg>
+                                    </div>
+                                    <div class="flex-1 mt-1">
+                                        <h3 class="text-sm font-bold text-slate-800 uppercase tracking-wide mb-2">Admón. de Expedientes</h3>
+                                        <p class="text-sm text-slate-600 leading-relaxed">
+                                            Se está trabajando en conjunto con el equipo de Operaciones en el análisis de los escenarios escalados hacia el GAP. El objetivo principal es identificar y habilitar aquellas tipologías que pueden ser resueltas de manera efectiva desde el primer contacto, optimizando así los tiempos de atención y reduciendo el volumen de escalamientos innecesarios.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Retiros -->
+                            <div class="bg-white border border-slate-100 rounded-lg shadow-sm flex relative overflow-hidden group">
+                                <div class="w-1.5 bg-indigo-500 absolute left-0 top-0 bottom-0"></div>
+                                <div class="p-5 flex gap-4 w-full pl-6">
+                                    <div class="w-10 h-10 rounded-full bg-indigo-50 flex items-center justify-center flex-shrink-0 text-indigo-600 border border-indigo-100">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                        </svg>
+                                    </div>
+                                    <div class="flex-1 mt-1">
+                                        <h3 class="text-sm font-bold text-slate-800 uppercase tracking-wide mb-2">Retiros</h3>
+                                        <p class="text-sm text-slate-600 leading-relaxed">
+                                            <strong class="text-slate-700">Homologación de Saldos:</strong> Se continúa trabajando de manera directa con el Instituto para la atención de los folios del universo restante. Estos casos se están notificando gradualmente al Infonavit con el objetivo de gestionar y agilizar su pronta solución.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Traspasos -->
+                            <div class="bg-white border border-slate-100 rounded-lg shadow-sm flex relative overflow-hidden group">
+                                <div class="w-1.5 bg-sky-500 absolute left-0 top-0 bottom-0"></div>
+                                <div class="p-5 flex gap-4 w-full pl-6">
+                                    <div class="w-10 h-10 rounded-full bg-sky-50 flex items-center justify-center flex-shrink-0 text-sky-600 border border-sky-100">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+                                        </svg>
+                                    </div>
+                                    <div class="flex-1 mt-1">
+                                        <h3 class="text-sm font-bold text-slate-800 uppercase tracking-wide mb-2">Traspasos</h3>
+                                        <p class="text-sm text-slate-600 leading-relaxed">
+                                            Se mantiene el seguimiento constante sobre los folios dependientes de la respuesta del Instituto (IMSS). Estos casos están sujetos a los tiempos de dictamen y resolución por parte de dicha entidad, por lo que se continuará el monitoreo hasta su cierre.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </section>
+
+                    <!-- Sección 2: Foco Crítico -->
+                    <section id="focus-section">
+                        <h2 class="text-lg font-bold text-slate-800 mb-6 flex items-center gap-2">
+                            <span class="bg-amber-500 w-1.5 h-5 rounded-full inline-block"></span>
+                            2. Foco Crítico Próxima Semana
+                        </h2>
+                        
+                        <div class="bg-gradient-to-r from-amber-50 to-white border border-amber-100 rounded-xl p-7 shadow-sm">
+                            <div class="flex flex-col sm:flex-row gap-5">
+                                <div class="flex-shrink-0">
+                                    <div class="w-12 h-12 rounded-full bg-amber-100 flex items-center justify-center text-amber-600">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="flex-1">
+                                    <h4 class="text-base font-bold text-slate-900 mb-3">Acciones Críticas Prioritarias</h4>
+                                    <div class="space-y-4">
+                                        <p class="text-sm text-slate-700 leading-relaxed">
+                                            <strong class="text-slate-800">Priorización de Folios de Larga Estadía (+100 Días):</strong> Se establecerá como prioridad crítica operativa la atención, desahogo y resolución de aquellos folios acumulados que exceden los 100 días de antigüedad en gestión. Con este propósito, se está llevando a cabo un análisis exhaustivo y detallado de cada caso particular para identificar los cuellos de botella específicos, estructurar un plan de contingencia dedicado y coordinar las acciones necesarias que permitan gestionar eficientemente y destrabar este universo de folios de forma inmediata.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </main>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notificación de error elegante -->
+    <div id="errorToast" class="fixed bottom-5 right-5 bg-red-600 text-white px-5 py-3 rounded-lg shadow-2xl hidden transition-all duration-300 z-50 text-sm font-medium">
+        Ocurrió un error al intentar generar la imagen.
+    </div>
+
+    <!-- Script para la funcionalidad de descarga -->
+    <script>
+        document.getElementById('downloadBtn').addEventListener('click', function() {
+            const reportElement = document.getElementById('report-content');
+            const errorToast = document.getElementById('errorToast');
+            
+            // Añadir clase para ocultar elementos durante la captura
+            document.body.classList.add('capturing');
+
+            // Preparar el elemento (quitar redondos y sombras extremas para un PNG limpio)
+            const originalBorderRadius = reportElement.style.borderRadius;
+            const originalBoxShadow = reportElement.style.boxShadow;
+            reportElement.style.borderRadius = '0';
+            reportElement.style.boxShadow = 'none';
+
+            // Generar el canvas
+            html2canvas(reportElement, {
+                scale: 2.5, // Mayor calidad para texto súper nítido
+                useCORS: true,
+                backgroundColor: '#ffffff'
+            }).then(canvas => {
+                const link = document.createElement('a');
+                link.download = 'Reporte_Folios_CRM_Servicios_Sem28.png';
+                link.href = canvas.toDataURL('image/png', 1.0);
+                link.click();
+
+                // Restaurar
+                document.body.classList.remove('capturing');
+                reportElement.style.borderRadius = originalBorderRadius;
+                reportElement.style.boxShadow = originalBoxShadow;
+            }).catch(err => {
+                console.error('Error al generar la imagen:', err);
+                document.body.classList.remove('capturing');
+                reportElement.style.borderRadius = originalBorderRadius;
+                reportElement.style.boxShadow = originalBoxShadow;
+                
+                // Mostrar notificación de error elegante
+                errorToast.classList.remove('hidden');
+                setTimeout(() => {
+                    errorToast.classList.add('hidden');
+                }, 4000);
+            });
+        });
+    </script>
+</body>
+</html>
